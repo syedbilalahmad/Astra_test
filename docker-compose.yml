@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  mysql:
+    build: ./db
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+
+  app:
+    build: ./
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql

@@ -1,0 +1,11 @@
+# Use the official MySQL image
+FROM mysql:latest
+
+# Environment variables for MySQL configuration
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=astra_db
+ENV MYSQL_USER=root
+ENV MYSQL_PASSWORD=root1234
+
+# Expose port 3306 to the outside world
+EXPOSE 3306
